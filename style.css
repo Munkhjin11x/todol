@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.cards{
+  display: flex;
+  gap: 100px ;
+}
+.openmodal{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  border: 1px solid black;
+  padding: 20px;
+}
+#addcard{
+  background-color: aqua;
+}
+#InpTitle{
+  width: 250px;
+}
+#InpDesc{
+  height: 200px;
+}
+#closeBtn{
+  height: 20px;
+}
