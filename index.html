@@ -4,31 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Erebor todo</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/check.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <div class="cards">
-            <div id="todo">
+    <h1 style="color: wheat; justify-content: center; position: absolute; " class="flex ">EREBOR Dwarf of Kingdom To do list</h1>
+    <div class="container flex">
+        <div class="cards flex">
+            <div id="todo" class="bgcolor">
                 <h1>todo</h1>
-                <div class="card"></div>
-                <button id="addcard">Addcard</button>
+                <div class="card flex directionColumn"></div>
+                <button id="addcard">+Addcard</button>
             </div>
-            <div id="inprogress">
+            <div id="inprogress" class="bgcolor">
                 <h1>in progress</h1>
-                <div class="card"></div>
-                <button id="addcard">Addcard</button>
+                <div class="card flex directionColumn"></div>
+                <button id="addcard">+Addcard</button>
             </div>
-            <div id="stuck">
+            <div id="stuck" class="bgcolor">
                 <h1>stuck</h1>
-                <div class="card"></div>
-                <button id="addcard">Addcard</button>
+                <div class="card flex directionColumn">
+                </div>
+                <button id="addcard">+Addcard</button>
             </div>
-            <div id="done">
+            <div id="done" class="bgcolor">
                 <h1>done</h1>
-                <div class="card"></div>
-                <button id="addcard">Addcard</button>
+                <div class="card flex directionColumn"></div>
+                <button id="addcard">+Addcard</button>
             </div>
         </div>
         <div class="modal">
@@ -50,7 +55,7 @@
                  <option value="high">high</option>
                  <option value="low">low</option>
                     </select>
-                    <button id ='closeBtn'>Addcard</button>
+                <button id ='closeBtn'>Addcard</button>
             </div>
         </div>
     </div>
