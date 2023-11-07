@@ -6,9 +6,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-size: cover;
+  background-size: 50%;
+  left: 100% ;
+  background-repeat: no-repeat;
 width: 100%;
-background-image: url(https://artistmonkeys.com/wp-content/uploads/2023/09/The-Lonely-Mountain-Erebor-beautiful-landscape-4.jpg);
+background-image: url(https://i.pinimg.com/564x/af/c1/e1/afc1e1a32fe2ec4fde387a4c6ef2c2e8.jpg);
 }
 .flex{
   display: flex;
@@ -35,10 +37,9 @@ background-image: url(https://artistmonkeys.com/wp-content/uploads/2023/09/The-L
   border-radius: 20px;
   height: fit-content;
 }
-.card{width: 280px;
+.card{max-width: 200px;
   gap: 10px;
   padding: 10px;
-
 }
 .doneBtn{
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJCAMAAAAv+uv7AAAAOVBMVEX///8AAACGhoaQkJCNjY2KioqUlJSBgYHV1dW3t7ezs7PCwsLw8PDs7OxeXl4PDw80NDQoKChWVlbPYhuxAAACHElEQVR4nO2abZOCMAyELb4goID+/x9753BKGwu0KYWdm30+605I0qW0ORwIIYQQQgghhBAyybWqm1uixq2pq2uixr3tjDF9nSRS978aXXtPCuRhBs4JIuc/jUdKKK15U6g1io9Gqw/k2n1UzEWpcRklOn2vVMaiVEmUtkSljqS2ZcxRoXB0FPSN3zg65hQtcHIFGnUkt95Vim3bwv17n+BLbnliC3QU/05ypbMQiymQDCTFkzyhhBeoUP9zgosQDM2KzIjWjyxKVShi1SjdSCCfLkRUlkbjRQGhLCdaW9JF5BMuZWX1Zh2JW5CyR1YqjT+UuXTH/FZBeMIzlmYg9EkzZ+RFWPU3CCQs7bGrTMmyS2SweD9LzikDWb1ZR+bfJvINlbgNmGcu/bJ4qxraN7JA43PrdzJKpnohZXe3UihDETYuzYDPV7JbvJ/vN7NcUxuUxh/Kc4/SDEjncMlk8X5kg9pks3g/ctHaXbMxU6FstGps/AXasFlHpIfslJEX0kV26JE30keeewUCkxOYPoFZOzB+AuOxMO8dmHcxzP4EZs8Gs4+F2dvDfO/AfAPGfBdnzQrMWUHs+Uk2i4M5U4I5Z4M5e4Q5j4U5o/ZbfNhvV80KzF1GbMKzFQjmzgvmHhDmbhTmvhjmDh1mrgBm1gJn/iR5JkdkRT+TgzOnhDO7hTPPhjPjBzT3iDMLesCZjyWEEEIIIYQQQv41P96/EBmZRXOqAAAAAElFTkSuQmCC);
@@ -67,10 +68,10 @@ background-image: url(https://artistmonkeys.com/wp-content/uploads/2023/09/The-L
   border-radius: 20px;
 }
 #title {
-  width: 100%
+  max-width: 100%
 }
 #desc {
-  width: 100%;
+  max-width: 100%;
   height: 150px;
 }
 #closeBtn {
@@ -81,8 +82,8 @@ background-image: url(https://artistmonkeys.com/wp-content/uploads/2023/09/The-L
   color: white  ;
 }
 #priority{
-  width: 100%;
+  max-width: 100%;
 }
 #status{
-  width: 100%;
+  max-width: 100%;
 }
