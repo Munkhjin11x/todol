@@ -16,8 +16,8 @@ let data = [
 function listItem(props) {
   let { title, desc, id } = props;
   return `
-  <div class="cardElement flex" id="${id}">
-    <div class=" doneBtn "><i class="gg-check"></i></div>
+  <div onclick="test('${props.id}')" class="cardElement flex" id="${id}">
+    <button class="doneBtn"><i class="gg-check"></i></button>
     <div class="detail flex directionColumn " >
     <h3>${title}</h3>
     <p>${desc}</p>
@@ -32,21 +32,36 @@ function listItem(props) {
     `;
 }
 
+function test(id) {
+  console.log(id);
+}
+
 let body = document.querySelector("body");
 let openModal = document.querySelector(".modal");
 let addCardOpen = document.querySelectorAll("#addcard");
 let closeBtn = document.getElementById("closeBtn");
+
 let card = document.querySelectorAll(".card");
 let cardElement = document.querySelector("cardElement");
 let todoCount = document.getElementById("todoCount");
 let inprogressCount = document.getElementById("inprogressCount");
 let stuckCount = document.getElementById("stuckCount");
 let doneCount = document.getElementById("doneCount");
-
 const remove = (element) => {
   const newarry = data.filter((item) => item.id !== element.parentElement.id);
   data = newarry;
   render(newarry);
+};
+const done = (element) => {
+  const id = element.parentElement.id;
+  const newdone = data.map((item) => {
+    if (item.id === id) {
+      item.status = "done";
+    }
+    return item;
+  });
+  render(newdone);
+  console.log(newdone);
 };
 
 for (const card of addCardOpen) {
@@ -119,6 +134,11 @@ function render(array) {
 
   let closeX = document.querySelectorAll(".closeX");
   let editBtn = document.querySelectorAll(".gg-Pen");
+  let doneBtn = document.querySelectorAll(".doneBtn");
+
+  doneBtn.forEach((element) => {
+    element.onclick = () => done(element);
+  });
 
   editBtn.forEach((element) => {
     element.onclick = () => edit(element, "edit");
