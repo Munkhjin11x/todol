@@ -2,20 +2,6 @@ const yid = () => {
   return "id-" + Math.random();
 };
 
-let progress = [
-  {
-    title: "Todo",
-  },
-  {
-    title: "in progress",
-  },
-  {
-    title: "stuck",
-  },
-  {
-    title: "done",
-  },
-];
 let data = [
   {
     done: "done",
@@ -29,13 +15,14 @@ let data = [
 
 function listItem(props) {
   let { title, desc, id } = props;
-  return `<div class="cardElement flex">
+  return `
+  <div class="cardElement flex" id="${id}">
     <div class=" doneBtn "><i class="gg-check"></i></div>
     <div class="detail flex directionColumn " >
     <h3>${title}</h3>
     <p>${desc}</p>
     </div>
-    <button class="closeX" id="${id}">
+    <button class="closeX">
     <i class="gg-close"></i>
     </button>
     <button class="gg-Pen" >
@@ -57,8 +44,7 @@ let stuckCount = document.getElementById("stuckCount");
 let doneCount = document.getElementById("doneCount");
 
 const remove = (element) => {
-  console.log(element.id);
-  const newarry = data.filter((item) => item.id !== element.id);
+  const newarry = data.filter((item) => item.id !== element.parentElement.id);
   data = newarry;
   render(newarry);
 };
@@ -67,15 +53,36 @@ for (const card of addCardOpen) {
   card.addEventListener("click", () => openModalTrigger());
 }
 
-function addTask() {
+function addTask(element, action) {
+  if (action === "edit") {
+    const id = element.parentElement.id;
+
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) {
+        let title = document.getElementById("title").value;
+        let desc = document.getElementById("desc").value;
+        let status = document.getElementById("status").value;
+        data[i].title = title;
+        data[i].desc = desc;
+        data[i].status = status;
+      }
+    }
+    render(data);
+    closeModalTrigger();
+    return;
+  }
   let title = document.getElementById("title").value;
   let desc = document.getElementById("desc").value;
   let status = document.getElementById("status").value;
+
   data.push({ title, desc, status, id: yid() });
   render(data);
   closeModalTrigger();
 }
-closeBtn.onclick = addTask;
+
+closeBtn.onclick = function () {
+  addTask();
+};
 
 function render(array) {
   const count = {
@@ -105,22 +112,27 @@ function render(array) {
     }
   });
 
-  console.log(count);
   todoCount.innerHTML = count.todo;
   inprogressCount.innerHTML = count.inprogress;
   stuckCount.innerHTML = count.stuck;
   doneCount.innerHTML = count.done;
 
   let closeX = document.querySelectorAll(".closeX");
+  let editBtn = document.querySelectorAll(".gg-Pen");
+
+  editBtn.forEach((element) => {
+    element.onclick = () => edit(element, "edit");
+  });
+
   closeX.forEach((element) => {
     element.onclick = () => remove(element);
   });
+}
 
-  let editbtn = document.querySelectorAll(".gg-Pen");
+function edit(element, action) {
+  openModalTrigger();
 
-  for (let i = 0; i < editbtn.length; i++) {
-    editbtn[i].onclick = openModalTrigger;
-  }
+  closeBtn.onclick = () => addTask(element, action);
 }
 
 render(data);

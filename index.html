@@ -11,67 +11,70 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
 </head>
 <body>
-    <h1 style="color: wheat; justify-content: center; position: absolute; " class="flex ">EREBOR Dwarf of Kingdom To do list</h1>
-    <div class="container flex">
-        <div class="cards flex">
-            <div id="todo" class="bgcolor">
-                <div class="flex">
-                    <h1>todo</h1>
-                    <div id="todoCount"></div>
+    <div class="rightBg">
+        <h1 style="color: wheat; justify-content: center; position: absolute; " class="flex ">EREBOR Dwarf of Kingdom To do list</h1>
+        <div class="container flex">
+            <div class="cards flex">
+                <div id="todo" class="bgcolor">
+                    <div class="flex">
+                        <h1>todo</h1>
+                        <div id="todoCount"></div>
+                    </div>
+                    <div class="card flex directionColumn"></div>
+                    <button id="addcard">+Addcard</button>
                 </div>
-                <div class="card flex directionColumn"></div>
-                <button id="addcard">+Addcard</button>
+                <div id="inprogress" class="bgcolor">
+                    <div class="flex">
+                        <h1>in progress</h1>
+                        <div id="inprogressCount"></div>
+                    </div>
+                    <div class="card flex directionColumn"></div>
+                    <button id="addcard">+Addcard</button>
+                </div>
+                <div id="stuck" class="bgcolor">
+                    <div class="flex">
+                        <h1>stuck</h1>
+                        <div id="stuckCount"></div>
+                    </div>
+                  
+                    <div class="card flex directionColumn">
+                    </div>
+                    <button id="addcard">+Addcard</button>
+                </div>
+                <div id="done" class="bgcolor">
+                    <div class="flex">
+                        <h1>done</h1>
+                        <div id="doneCount"></div>
+                    </div>
+                    
+                    <div class="card flex directionColumn"></div>
+                    <button id="addcard">+Addcard</button>
+                </div>
             </div>
-            <div id="inprogress" class="bgcolor">
-                <div class="flex">
-                    <h1>in progress</h1>
-                    <div id="inprogressCount"></div>
+            <div class="modal">
+                <div >
+                    <h2>Add task</h2>
+                    <h3>Title</h3>
+                    <input type="" id = "title">
+                    <h3>description</h3>
+                    <input type="" id="desc">
+                    <h3>status</h3>
+                    <select id="status">
+                  <option value="todo">todo</option>
+                  <option value="inprogress">inprogress</option>
+                  <option value="stuck">stuck</option>
+                  <option value="done">done</option>
+                     </select>
+                     <p>priority</p>
+                     <select id="priority">
+                     <option value="high">high</option>
+                     <option value="low">low</option>
+                        </select>
+                    <button id ='closeBtn'>Addcard</button>
                 </div>
-                <div class="card flex directionColumn"></div>
-                <button id="addcard">+Addcard</button>
-            </div>
-            <div id="stuck" class="bgcolor">
-                <div class="flex">
-                    <h1>stuck</h1>
-                    <div id="stuckCount"></div>
-                </div>
-              
-                <div class="card flex directionColumn">
-                </div>
-                <button id="addcard">+Addcard</button>
-            </div>
-            <div id="done" class="bgcolor">
-                <div class="flex">
-                    <h1>done</h1>
-                    <div id="doneCount"></div>
-                </div>
-                
-                <div class="card flex directionColumn"></div>
-                <button id="addcard">+Addcard</button>
             </div>
         </div>
-        <div class="modal">
-            <div >
-                <h2>Add task</h2>
-                <h3>Title</h3>
-                <input type="" id = "title">
-                <h3>description</h3>
-                <input type="" id="desc">
-                <h3>status</h3>
-                <select id="status">
-              <option value="todo">todo</option>
-              <option value="inprogress">inprogress</option>
-              <option value="stuck">stuck</option>
-              <option value="done">done</option>
-                 </select>
-                 <p>priority</p>
-                 <select id="priority">
-                 <option value="high">high</option>
-                 <option value="low">low</option>
-                    </select>
-                <button id ='closeBtn'>Addcard</button>
-            </div>
-        </div>
+
     </div>
     <script src="./index.js"></script>
 </body>
