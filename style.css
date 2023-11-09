@@ -6,17 +6,27 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-size: 50%;
-  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
 width: 100%;
-background-image: url(https://i.pinimg.com/474x/e0/a1/e0/e0a1e0ca04578fc56b368e17cb662f1f.jpg);
+background-image: url(https://artistmonkeys.com/wp-content/uploads/2023/09/The-Lonely-Mountain-Erebor-beautiful-landscape-4.jpg);
 
 }
+.left20px{
+margin-left: 20px;
+color: white;
+font-size: 30px;}
 .flex{
   display: flex;
 }
 .directionColumn{
   flex-direction: column;
+}
+.ctr-row{
+  justify-content: center;
+}
+.ctr-clm{
+  align-items: center;
 }
 .container {
   justify-content: center;
@@ -24,10 +34,10 @@ background-image: url(https://i.pinimg.com/474x/e0/a1/e0/e0a1e0ca04578fc56b368e1
   gap: 20px;
 }
 .cardElement{
-  background-color: white;
   width: 100%;  
-  gap: 10px;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
+  color: white;
 }
 .cards {
   gap: 100px;
@@ -35,13 +45,31 @@ background-image: url(https://i.pinimg.com/474x/e0/a1/e0/e0a1e0ca04578fc56b368e1
   border-radius: 20px;
   height: fit-content;
 }
-.card{max-width: 200px;
+.card{width: 270px;
   gap: 10px;
   padding: 10px;
 }
 .doneBtn{
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJCAMAAAAv+uv7AAAAOVBMVEX///8AAACGhoaQkJCNjY2KioqUlJSBgYHV1dW3t7ezs7PCwsLw8PDs7OxeXl4PDw80NDQoKChWVlbPYhuxAAACHElEQVR4nO2abZOCMAyELb4goID+/x9753BKGwu0KYWdm30+605I0qW0ORwIIYQQQgghhBAyybWqm1uixq2pq2uixr3tjDF9nSRS978aXXtPCuRhBs4JIuc/jUdKKK15U6g1io9Gqw/k2n1UzEWpcRklOn2vVMaiVEmUtkSljqS2ZcxRoXB0FPSN3zg65hQtcHIFGnUkt95Vim3bwv17n+BLbnliC3QU/05ypbMQiymQDCTFkzyhhBeoUP9zgosQDM2KzIjWjyxKVShi1SjdSCCfLkRUlkbjRQGhLCdaW9JF5BMuZWX1Zh2JW5CyR1YqjT+UuXTH/FZBeMIzlmYg9EkzZ+RFWPU3CCQs7bGrTMmyS2SweD9LzikDWb1ZR+bfJvINlbgNmGcu/bJ4qxraN7JA43PrdzJKpnohZXe3UihDETYuzYDPV7JbvJ/vN7NcUxuUxh/Kc4/SDEjncMlk8X5kg9pks3g/ctHaXbMxU6FstGps/AXasFlHpIfslJEX0kV26JE30keeewUCkxOYPoFZOzB+AuOxMO8dmHcxzP4EZs8Gs4+F2dvDfO/AfAPGfBdnzQrMWUHs+Uk2i4M5U4I5Z4M5e4Q5j4U5o/ZbfNhvV80KzF1GbMKzFQjmzgvmHhDmbhTmvhjmDh1mrgBm1gJn/iR5JkdkRT+TgzOnhDO7hTPPhjPjBzT3iDMLesCZjyWEEEIIIYQQQv41P96/EBmZRXOqAAAAAElFTkSuQmCC);
+  height: 40px;
+  border: none;
+  background-color: hotpink;
+  color: white;
+
 }
+.gg-Pen{
+  height: 40px;
+  border: none;
+  background-color: hotpink;
+  color: white;
+
+}
+.closeX{
+  height: 40px;
+  border: none;
+  background-color: hotpink;
+  color: white;
+}
+
 .modal {
   display: none;
   flex-direction: column;
@@ -54,16 +82,20 @@ background-image: url(https://i.pinimg.com/474x/e0/a1/e0/e0a1e0ca04578fc56b368e1
   background-color: white;
   border-radius: 5px;
   width: 300px;
+  background-color: hotpink;
 }
 .bgcolor{
-  background-color: #ebecf0;
+background-image: url(https://i.pinimg.com/originals/84/df/86/84df869ca596673ec5a9ee51178686e0.jpg);
   border-radius: 5px;
   width: 300px;
+  background-size: cover;
 }
 #addcard {
   border: none;
+background: none;
   font-size: 20px;
   border-radius: 20px;
+  color: white;
 }
 #title {
   width: 100%

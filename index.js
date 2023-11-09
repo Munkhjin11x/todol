@@ -16,8 +16,8 @@ let data = [
 function listItem(props) {
   let { title, desc, id } = props;
   return `
-  <div onclick="test('${props.id}')" class="cardElement flex" id="${id}">
-    <button class="doneBtn"><i class="gg-check"></i></button>
+  <div class="cardElement flex" id="${id}">
+    <button class="doneBtn"><i class="gg-check-o"></i></button>
     <div class="detail flex directionColumn " >
     <h3>${title}</h3>
     <p>${desc}</p>
@@ -32,9 +32,6 @@ function listItem(props) {
     `;
 }
 
-function test(id) {
-  console.log(id);
-}
 
 let body = document.querySelector("body");
 let openModal = document.querySelector(".modal");
@@ -47,6 +44,9 @@ let todoCount = document.getElementById("todoCount");
 let inprogressCount = document.getElementById("inprogressCount");
 let stuckCount = document.getElementById("stuckCount");
 let doneCount = document.getElementById("doneCount");
+
+
+
 const remove = (element) => {
   const newarry = data.filter((item) => item.id !== element.parentElement.id);
   data = newarry;
@@ -61,7 +61,6 @@ const done = (element) => {
     return item;
   });
   render(newdone);
-  console.log(newdone);
 };
 
 for (const card of addCardOpen) {
@@ -89,7 +88,7 @@ function addTask(element, action) {
   let title = document.getElementById("title").value;
   let desc = document.getElementById("desc").value;
   let status = document.getElementById("status").value;
-
+  title.value ='';
   data.push({ title, desc, status, id: yid() });
   render(data);
   closeModalTrigger();

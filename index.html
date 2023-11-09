@@ -6,35 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erebor todo</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/check.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/check-o.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="rightBg">
+
         <h1 style="color: wheat; justify-content: center; position: absolute; " class="flex ">EREBOR Dwarf of Kingdom To do list</h1>
         <div class="container flex">
             <div class="cards flex">
                 <div id="todo" class="bgcolor">
-                    <div class="flex">
+                    <div class="flex ctr-clm ctr-row" >
                         <h1>todo</h1>
-                        <div id="todoCount"></div>
+                        <div class="left20px" id="todoCount"></div>
                     </div>
                     <div class="card flex directionColumn"></div>
                     <button id="addcard">+Addcard</button>
                 </div>
                 <div id="inprogress" class="bgcolor">
-                    <div class="flex">
+                    <div class="flex ctr-clm ctr-row">
                         <h1>in progress</h1>
-                        <div id="inprogressCount"></div>
+                        <div class="left20px" id="inprogressCount"></div>
                     </div>
                     <div class="card flex directionColumn"></div>
                     <button id="addcard">+Addcard</button>
                 </div>
                 <div id="stuck" class="bgcolor">
-                    <div class="flex">
+                    <div class="flex ctr-clm ctr-row">
                         <h1>stuck</h1>
-                        <div id="stuckCount"></div>
+                        <div class="left20px" id="stuckCount"></div>
                     </div>
                   
                     <div class="card flex directionColumn">
@@ -42,9 +42,9 @@
                     <button id="addcard">+Addcard</button>
                 </div>
                 <div id="done" class="bgcolor">
-                    <div class="flex">
+                    <div class="flex ctr-clm  ctr-row">
                         <h1>done</h1>
-                        <div id="doneCount"></div>
+                        <div class="left20px" id="doneCount"></div>
                     </div>
                     
                     <div class="card flex directionColumn"></div>
@@ -75,7 +75,6 @@
             </div>
         </div>
 
-    </div>
     <script src="./index.js"></script>
 </body>
 </html>
